@@ -11,6 +11,8 @@
 #import <DVAssetLoaderDelegate/DVURLAsset.h>
 #import <DVAssetLoaderDelegate/DVAssetLoaderDelegate.h>
 #endif
+#import "RNPhotosFrameworkExtension.h"
+
 
 @class RCTEventDispatcher;
 #if __has_include(<react-native-video/RCTVideoCache.h>)
@@ -37,6 +39,7 @@
 @property (nonatomic, copy) RCTBubblingEventBlock onPlaybackResume;
 @property (nonatomic, copy) RCTBubblingEventBlock onPlaybackRateChange;
 @property (nonatomic, copy) RCTBubblingEventBlock onVideoExternalPlaybackChange;
+@property (nonatomic, strong) RNPhotosFrameworkExtension *photosFrameworkExtension;
 
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
 
