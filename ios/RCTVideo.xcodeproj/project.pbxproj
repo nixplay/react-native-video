@@ -15,6 +15,7 @@
 		D1107C0F2110259000073188 /* RCTVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1107C062110259000073188 /* RCTVideoManager.m */; };
 		D1107C102110259000073188 /* RCTVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1107C082110259000073188 /* RCTVideoPlayerViewController.m */; };
 		D1107C112110259000073188 /* RCTVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1107C082110259000073188 /* RCTVideoPlayerViewController.m */; };
+		E38AB668224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E38AB667224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,8 @@
 		D1107C072110259000073188 /* RCTVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTVideo.h; path = Video/RCTVideo.h; sourceTree = "<group>"; };
 		D1107C082110259000073188 /* RCTVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTVideoPlayerViewController.m; path = Video/RCTVideoPlayerViewController.m; sourceTree = "<group>"; };
 		D1107C092110259000073188 /* RCTVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTVideoManager.h; path = Video/RCTVideoManager.h; sourceTree = "<group>"; };
+		E38AB666224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNPhotosFrameworkExtension.h; path = Video/RNPhotosFrameworkExtension.h; sourceTree = "<group>"; };
+		E38AB667224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNPhotosFrameworkExtension.m; path = Video/RNPhotosFrameworkExtension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				D1107C022110259000073188 /* RCTVideoPlayerViewControllerDelegate.h */,
 				D1107C042110259000073188 /* UIView+FindUIViewController.h */,
 				D1107C032110259000073188 /* UIView+FindUIViewController.m */,
+				E38AB666224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.h */,
+				E38AB667224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				641E28441F0EEC8500443AF6 /* libRCTVideo.a */,
 				49E995712048B4CE00EA7890 /* Frameworks */,
@@ -163,6 +168,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -183,6 +189,7 @@
 			files = (
 				D1107C0A2110259000073188 /* UIView+FindUIViewController.m in Sources */,
 				D1107C102110259000073188 /* RCTVideoPlayerViewController.m in Sources */,
+				E38AB668224CA8FF00CB10F5 /* RNPhotosFrameworkExtension.m in Sources */,
 				D1107C0E2110259000073188 /* RCTVideoManager.m in Sources */,
 				D1107C0C2110259000073188 /* RCTVideo.m in Sources */,
 			);
