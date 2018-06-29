@@ -11,6 +11,8 @@
 #import <DVAssetLoaderDelegate/DVURLAsset.h>
 #import <DVAssetLoaderDelegate/DVAssetLoaderDelegate.h>
 #endif
+#import "RNPhotosFrameworkExtension.h"
+
 
 @class RCTEventDispatcher;
 #if __has_include(<react-native-video/RCTVideoCache.h>)
@@ -42,6 +44,7 @@
 @property (nonatomic, copy) RCTDirectEventBlock onVideoExternalPlaybackChange;
 @property (nonatomic, copy) RCTDirectEventBlock onPictureInPictureStatusChanged;
 @property (nonatomic, copy) RCTDirectEventBlock onRestoreUserInterfaceForPictureInPictureStop;
+@property (nonatomic, strong) RNPhotosFrameworkExtension *photosFrameworkExtension;
 
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
 
