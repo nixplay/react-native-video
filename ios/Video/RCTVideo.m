@@ -352,6 +352,7 @@ static int const RCTVideoUnset = -1;
       }
 
       _player = [AVPlayer playerWithPlayerItem:_playerItem];
+      [self touchPlayerLayer];
       _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 
       [_player addObserver:self forKeyPath:playbackRate options:0 context:nil];
@@ -1195,10 +1196,24 @@ static int const RCTVideoUnset = -1;
   }
 }
 
+- (void)touchPlayerLayer
+{
+  if(!_player)return;
+  if(_playerLayer)return;
+
+  _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
+  _playerLayer.frame = self.bounds;
+  _playerLayer.needsDisplayOnBoundsChange = YES;
+
+  [self.layer addSublayer:_playerLayer];
+  self.layer.needsDisplayOnBoundsChange=YES;
+}
+
 - (void)usePlayerLayer
 {
   if( _player )
   {
+    [self touchPlayerLayer];
     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     _playerLayer.frame = self.bounds;
     _playerLayer.needsDisplayOnBoundsChange = YES;
