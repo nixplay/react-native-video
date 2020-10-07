@@ -49,8 +49,6 @@
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:url
                                                 resolvingAgainstBaseURL:NO];
     NSArray *queryItems = urlComponents.queryItems;
-    NSString *deliveryModeQuery = [self valueForKey:@"deliveryMode"
-                                     fromQueryItems:queryItems];
     NSString *versionQuery = [self valueForKey:@"version"
                                 fromQueryItems:queryItems];
     
@@ -62,19 +60,7 @@
         }
     }
     
-    PHVideoRequestOptionsDeliveryMode deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
-    if(deliveryModeQuery != nil) {
-        if([deliveryModeQuery isEqualToString:@"mediumQuality"]) {
-            deliveryMode = PHVideoRequestOptionsDeliveryModeMediumQualityFormat;
-        }
-        else if([deliveryModeQuery isEqualToString:@"highQuality"]) {
-            deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
-        }
-        else if([deliveryModeQuery isEqualToString:@"fast"]) {
-            deliveryMode = PHVideoRequestOptionsDeliveryModeFastFormat;
-        }
-    }
-    videoRequestOptions.deliveryMode = deliveryMode;
+    videoRequestOptions.deliveryMode = PHVideoRequestOptionsDeliveryModeFastFormat;
     videoRequestOptions.version = version;
     
     
